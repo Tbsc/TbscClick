@@ -257,7 +257,7 @@ public class TbscClick implements IClick {
     public void sendMessageWithId(String message, int id) {
         compat.reflInvokeMethod(ChatComponent.class, minecraft.gui.getChat(), "m_240964_",
                 new Class[]{Component.class, MessageSignature.class, GuiMessageTag.class},
-                new Object[]{Component.literal(message), new MessageSignature(new byte[] {(byte) id}), GuiMessageTag.system()});
+                new Object[]{Component.literal(message), new MessageSignature(new byte[256]), GuiMessageTag.system()});
     }
 
 }
